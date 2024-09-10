@@ -9,3 +9,12 @@
   outline: none;
   transition: 0.3s;
 }
+:root
+{
+  --white-clr: #fff;
+  --light-clr: #F5F7FA;
+  --black-clr: #000;
+  --dark-blue-clr: #375B68;
+  --medium-blue-clr: #4F7E8E;
+  --light-blue-clr: #8EC5CA;
+}
