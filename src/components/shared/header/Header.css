@@ -38,6 +38,7 @@ header nav ul a
     margin: 0 auto; 
     left: 30%;
     transform: rotate(-20deg);
+    animation: activeLinkAnimation 0.3s linear;
 }
 header nav ul a:hover
 {
@@ -46,4 +47,21 @@ header nav ul a:hover
 header nav ul:nth-child(2) li:hover
 {
     opacity: 0.8;
+}
+@keyframes activeLinkAnimation
+{
+    0%
+    {
+        bottom: 20px;
+        opacity: 0;
+        left: 40%;
+        transform: rotate(-50deg);
+    }
+    100%
+    {
+        bottom: 6px;
+        opacity: 1;
+        left: 30%;
+        transform: rotate(-20deg);
+    }
 }
