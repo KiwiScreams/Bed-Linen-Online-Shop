@@ -28,7 +28,14 @@ const Category = () => {
   ];
   return (
     <>
-      <section className="categories-section"></section>
+      <section className="categories-section">
+        {categories.map((category) => (
+          <div key={category.id} className="category-item">
+            <img src={category.image} alt={category.title} />
+            <h2>{category.title}</h2>
+          </div>
+        ))}
+      </section>
     </>
   );
 };
