@@ -27,3 +27,13 @@ body
   background-color: #375B68;
   overflow-x: hidden;
 }
+::-webkit-scrollbar
+{
+  width: 10px;
+  display: block;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: var(--medium-blue-clr);
+  border-radius: 10px;
+}
