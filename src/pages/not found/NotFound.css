@@ -1,0 +1,20 @@
+.not-found-page
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+}
+.not-found-page .image-container
+{
+    width: 50px;
+    height: 50px;
+}
+.not-found-page .image-container img
+{
+    width: 100%;
+}

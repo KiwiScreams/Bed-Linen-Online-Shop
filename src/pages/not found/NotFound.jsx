@@ -4,12 +4,17 @@ const NotFound = () => {
   return (
     <>
       <section className="not-found-page">
-        <div className="image-container">
-          <img src={errorImage} alt="" />
+        <div>
+          <div className="image-container">
+            <img src={errorImage} alt="" />
+          </div>
+          <h2>Oops</h2>
+          <p>
+            It looks like the page you're looking for doesn't exist. It might
+            have been moved, deleted, or never existed in the first place.
+          </p>
+          <button>Home</button>
         </div>
-        <h2>Oops</h2>
-        <p>It looks like the page you're looking for doesn't exist. It might have been moved, deleted, or never existed in the first place.</p>
-        <button>Home</button>
       </section>
     </>
   );
