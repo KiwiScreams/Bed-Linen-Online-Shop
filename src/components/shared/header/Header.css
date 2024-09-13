@@ -96,6 +96,7 @@ header ul.nav-open
     background-color: var(--dark-blue-clr);
     left: 0;
     box-shadow: 0 0 10px var(--black-clr);
+    animation: slideIn 0.3s ease-in-out;
 }
 header ul.nav-open .active-link::after
 {
@@ -144,6 +145,19 @@ header ul.nav-closed
     100%
     {
       transform: translateX(-50%) scale(1);
+    }
+}
+@keyframes slideIn
+{
+    0%
+    {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100%
+    {
+      transform: translateX(0);
+      opacity: 1;
     }
 }
 @media screen and (max-width: 900px)
