@@ -22,3 +22,8 @@
 {
   cursor: pointer;
 }
+body
+{
+  background-color: #375B68;
+  overflow-x: hidden;
+}

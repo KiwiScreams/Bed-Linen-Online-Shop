@@ -1,7 +1,6 @@
 header
 {
     width: 100%;
-    background-color: black;
     padding: 35px 66px 0 66px;
 }
 header nav
@@ -51,6 +50,7 @@ header nav ul:nth-child(2) li:hover
 header.mobile
 {
     display: none;
+    position: relative;
 }
 header.mobile .bar-container
 {
@@ -88,8 +88,27 @@ header.mobile .bar-container
 header ul.nav-open
 {
     display: block;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 80px;
+    padding: 10px;
+    background-color: var(--dark-blue-clr);
+    left: 0;
+    box-shadow: 0 0 10px var(--black-clr);
+}
+header ul.nav-open .active-link::after
+{
+    display: none;
+}
+header ul.nav-open .active-link
+{
+    color: var(--light-blue-clr);
+}
+header ul.nav-open li
+{
+    width: 100%;
+    margin-bottom: 10px;
 }
 header ul.nav-closed
 {
@@ -134,6 +153,5 @@ header ul.nav-closed
     header.mobile
     {
         display: block;
-        background-color: red;
     }
 }
