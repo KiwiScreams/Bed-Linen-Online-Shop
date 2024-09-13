@@ -11,22 +11,24 @@ const Hero = () => {
     const handleMouseMove = (event) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
+
       if (feathersImageRef.current) {
         const rotationX = `perspective(1000px) rotateX(${
-          (mouseY / window.innerHeight) * 10
+          (mouseY / window.innerHeight) * 2
         }deg)`;
         const rotationY = `perspective(1000px) rotateY(${
-          (mouseX / window.innerWidth) * 10
+          (mouseX / window.innerWidth) * 2
         }deg)`;
         feathersImageRef.current.style.transform = `${rotationX} ${rotationY}`;
       }
     };
+
     document.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, [feathersImageRef]);
-
   return (
     <>
       <section className="hero-component">

@@ -58,7 +58,11 @@
 {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 110%;
+}
+.hero-images img
+{
+    transition: transform 0.2s ease-in-out;
 }
 .hero-images .hero-image
 {
