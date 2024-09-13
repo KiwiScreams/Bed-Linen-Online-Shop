@@ -18,3 +18,7 @@
   --medium-blue-clr: #4F7E8E;
   --light-blue-clr: #8EC5CA;
 }
+.pointer, button, a
+{
+  cursor: pointer;
+}

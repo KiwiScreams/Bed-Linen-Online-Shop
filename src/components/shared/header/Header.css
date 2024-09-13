@@ -43,3 +43,7 @@ header nav ul a:hover
 {
     color: var(--light-blue-clr);
 }
+header nav ul:nth-child(2) li:hover
+{
+    opacity: 0.8;
+}

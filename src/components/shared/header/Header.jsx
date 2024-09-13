@@ -61,13 +61,13 @@ const Header = () => {
             </li>
           </ul>
           <ul>
-            <li>
+            <li className="pointer">
               <img src={cartIcon} alt="" />
             </li>
-            <li>
+            <li className="pointer">
               <img src={userIcon} alt="" />
             </li>
-            <li>
+            <li className="pointer">
               <img src={languageIcon} alt="" />
             </li>
           </ul>
