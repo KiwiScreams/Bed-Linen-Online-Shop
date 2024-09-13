@@ -1,0 +1,67 @@
+header
+{
+    width: 100%;
+    background-color: black;
+    padding: 35px 66px 0 66px;
+}
+header nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header nav ul
+{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+header nav ul:nth-child(2)
+{
+    gap: 5px;
+}
+header nav ul a
+{
+    padding: 0 24px;
+    color: var(--white-clr);
+    font-size: 20px;
+    position: relative;
+}
+.active-link::after
+{
+    content: url('../../../assets/img/game-icons_feather.png');
+    position: absolute;
+    bottom: 6px;
+    width: 12px;
+    height: 12px;
+    margin: 0 auto; 
+    left: 30%;
+    transform: rotate(-20deg);
+    animation: activeLinkAnimation 0.3s ease-in-out;
+}
+header nav ul a:hover
+{
+    color: var(--light-blue-clr);
+}
+header nav ul:nth-child(2) li:hover
+{
+    opacity: 0.8;
+}
+@keyframes activeLinkAnimation
+{
+    from
+    {
+        bottom: 20px;
+        opacity: 0;
+        left: 40%;
+        transform: rotate(-50deg);
+    }
+    to
+    {
+        bottom: 6px;
+        opacity: 1;
+        left: 30%;
+        transform: rotate(-20deg);
+    }
+}
