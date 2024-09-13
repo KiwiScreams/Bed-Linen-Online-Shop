@@ -6,11 +6,11 @@ const Hero = () => {
     <>
       <section className="hero-component">
         <h1>Dream in comfort</h1>
-        <p>Creating your perfect sleep sanctuary with us</p>
+        <p>Creating Your Perfect Sleep Sanctuary With Us</p>
         <button>
-            <img src={arrowIcon} alt="" />
-            <img src={circleIcon} alt="" />
-            shop now
+          <img src={arrowIcon} alt="" />
+          <img src={circleIcon} alt="" />
+          <span>Shop Now</span>
         </button>
       </section>
     </>
