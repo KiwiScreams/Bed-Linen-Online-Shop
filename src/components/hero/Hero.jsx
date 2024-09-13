@@ -7,20 +7,21 @@ import { useRef, useEffect } from "react";
 
 const Hero = () => {
   const feathersImageRef = useRef(null);
-
   useEffect(() => {
     const handleMouseMove = (event) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
-
       if (feathersImageRef.current) {
-        const rotation = `rotate(${(mouseX / window.innerWidth) * 10}deg)`;
-        feathersImageRef.current.style.transform = rotation;
+        const rotationX = `perspective(1000px) rotateX(${
+          (mouseY / window.innerHeight) * 10
+        }deg)`;
+        const rotationY = `perspective(1000px) rotateY(${
+          (mouseX / window.innerWidth) * 10
+        }deg)`;
+        feathersImageRef.current.style.transform = `${rotationX} ${rotationY}`;
       }
     };
-
     document.addEventListener("mousemove", handleMouseMove);
-
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
