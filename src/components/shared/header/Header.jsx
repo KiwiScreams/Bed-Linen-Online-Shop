@@ -8,6 +8,9 @@ import { useState, useEffect } from "react";
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <header className="desktop">
@@ -81,60 +84,14 @@ const Header = () => {
       </header>
       <header className="mobile">
         <nav>
-          <ul>
-            <li>
-              <Link
-                to="/"
-                className={location.pathname === "/" ? "active-link" : ""}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={location.pathname === "/about" ? "active-link" : ""}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/payment"
-                className={
-                  location.pathname === "/payment" ? "active-link" : ""
-                }
-              >
-                Payment
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/catalog"
-                className={
-                  location.pathname === "/catalog" ? "active-link" : ""
-                }
-              >
-                Catalog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/shop"
-                className={location.pathname === "/shop" ? "active-link" : ""}
-              >
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={location.pathname === "/blog" ? "active-link" : ""}
-              >
-                Blog
-              </Link>
-            </li>
-          </ul>
+          <div
+            className={`bar-container ${isMenuOpen ? "change" : ""}`}
+            onClick={handleMenuToggle}
+          >
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
           <ul>
             <li className="pointer">
               <img src={cartIcon} alt="" />
