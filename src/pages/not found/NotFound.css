@@ -1,0 +1,44 @@
+.not-found-page
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    text-align: center;
+}
+.not-found-page .image-container
+{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+.not-found-page .image-container img
+{
+    width: 100%;
+}
+.not-found-page h2
+{
+    color: var(--white-clr);
+    font-size: 30px;
+    margin: 20px 0;
+}
+.not-found-page p
+{
+    color: var(--white-clr);
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.not-found-page button
+{
+    color: var(--white-clr);
+    position: relative;
+    background-color: transparent;
+    font-size: 20px;
+    border-bottom: 3px solid var(--light-blue-clr);
+}
