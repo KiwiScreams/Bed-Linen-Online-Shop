@@ -11,7 +11,6 @@ const Hero = () => {
     const handleMouseMove = (event) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
-
       if (feathersImageRef.current) {
         const rotationX = `perspective(1000px) rotateX(${
           (mouseY / window.innerHeight) * 2
@@ -22,9 +21,7 @@ const Hero = () => {
         feathersImageRef.current.style.transform = `${rotationX} ${rotationY}`;
       }
     };
-
     document.addEventListener("mousemove", handleMouseMove);
-
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
