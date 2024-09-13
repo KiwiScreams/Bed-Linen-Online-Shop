@@ -53,6 +53,7 @@
 {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 .hero-images img:nth-child(2)
 {
