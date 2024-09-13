@@ -4,13 +4,25 @@ import cartIcon from "../../../assets/img/Shopping.svg";
 import userIcon from "../../../assets/img/profile.svg";
 import languageIcon from "../../../assets/img/language.svg";
 import activeIcon from "../../../assets/img/game-icons_feather.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const mobileHeaderRef = useRef(null);
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleDocumentClick = (event) => {
+    if (!mobileHeaderRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleDocumentClick);
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
   return (
     <>
       <header className="desktop">
@@ -84,7 +96,10 @@ const Header = () => {
       </header>
 
       <header className="mobile">
-        <nav className={`${isMenuOpen ? "nav-open" : "nav-closed"}`}>
+        <nav
+          className={`${isMenuOpen ? "nav-open" : "nav-closed"} `}
+          ref={mobileHeaderRef}
+        >
           <div
             className={`bar-container ${isMenuOpen ? "change" : ""}`}
             onClick={handleMenuToggle}

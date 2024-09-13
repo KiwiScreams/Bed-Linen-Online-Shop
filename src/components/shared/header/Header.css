@@ -131,6 +131,21 @@ header ul.nav-closed
         transform: rotate(-20deg);
     }
 }
+@keyframes pulse
+{
+    0%
+    {
+      transform: translateX(-50%) scale(1);
+    }
+    50%
+    {
+      transform: translateX(-50%) scale(1.2);
+    }
+    100%
+    {
+      transform: translateX(-50%) scale(1);
+    }
+}
 @media screen and (max-width: 900px)
 {
     header
