@@ -1,6 +1,8 @@
 import "./Hero.css";
 import arrowIcon from "../../assets/img/arrow.png";
 import circleIcon from "../../assets/img/cyrcle.png";
+import heroImage from "../../assets/img/Hero-pic.png";
+import feathersImage from "../../assets/img/Feather-bg.png";
 const Hero = () => {
   return (
     <>
@@ -13,6 +15,10 @@ const Hero = () => {
           <span>Shop Now</span>
         </button>
       </section>
+      <div className="hero-images">
+        <img src={heroImage} alt="" className="hero-image" />
+        <img src={feathersImage} alt="" />
+      </div>
     </>
   );
 };
