@@ -1,6 +1,32 @@
 header
 {
     width: 100%;
-    background-color: red;
+    background-color: black;
     padding: 35px 66px 0 66px;
+}
+header nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header nav ul
+{
+    display: flex;
+    gap: 8px;
+}
+header nav ul:nth-child(2)
+{
+    gap: 5px;
+}
+header nav ul a
+{
+    padding: 0 24px;
+    color: var(--white-clr);
+    font-size: 20px;
+}
+header nav ul a:hover
+{
+    color: var(--light-blue-clr);
 }
