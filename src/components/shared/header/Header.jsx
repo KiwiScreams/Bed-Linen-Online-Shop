@@ -1,37 +1,75 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import cartIcon from "../../../assets/img/Shopping.svg";
 import userIcon from "../../../assets/img/profile.svg";
 import languageIcon from "../../../assets/img/language.svg";
+import activeIcon from "../../../assets/img/game-icons_feather.png";
 const Header = () => {
+  const location = useLocation();
   return (
     <>
       <header>
         <nav>
           <ul>
             <li>
-              <Link>Home</Link>
+              <Link
+                to="/"
+                className={location.pathname === "/" ? "active-link" : ""}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link>About</Link>
+              <Link
+                to="/about"
+                className={location.pathname === "/about" ? "active-link" : ""}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link>Payment</Link>
+              <Link
+                to="/payment"
+                className={location.pathname === "/payment" ? "active-link" : ""}
+              >
+                Payment
+              </Link>
             </li>
             <li>
-              <Link>Catalog</Link>
+              <Link
+                to="/catalog"
+                className={location.pathname === "/catalog" ? "active-link" : ""}
+              >
+                Catalog
+              </Link>
             </li>
             <li>
-              <Link>Shop</Link>
+              <Link
+                to="/shop"
+                className={location.pathname === "/shop" ? "active-link" : ""}
+              >
+                Shop
+              </Link>
             </li>
             <li>
-              <Link>Blog</Link>
+              <Link
+                to="/blog"
+                className={location.pathname === "/blog" ? "active-link" : ""}
+              >
+                Blog
+              </Link>
             </li>
           </ul>
           <ul>
-            <li><img src={cartIcon} alt="" /></li>
-            <li><img src={userIcon} alt="" /></li>
-            <li><img src={languageIcon} alt="" /></li>
+            <li>
+              <img src={cartIcon} alt="" />
+            </li>
+            <li>
+              <img src={userIcon} alt="" />
+            </li>
+            <li>
+              <img src={languageIcon} alt="" />
+            </li>
           </ul>
         </nav>
       </header>

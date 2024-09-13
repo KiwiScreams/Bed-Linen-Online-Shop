@@ -15,6 +15,7 @@ header nav ul
 {
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 header nav ul:nth-child(2)
 {
@@ -25,8 +26,5 @@ header nav ul a
     padding: 0 24px;
     color: var(--white-clr);
     font-size: 20px;
-}
-header nav ul a:hover
-{
-    color: var(--light-blue-clr);
+    position: relative;
 }
