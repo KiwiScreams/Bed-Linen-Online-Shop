@@ -94,7 +94,6 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-
       <header className="mobile">
         <nav
           className={`${isMenuOpen ? "nav-open" : "nav-closed"} `}
