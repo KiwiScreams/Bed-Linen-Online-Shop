@@ -48,6 +48,10 @@ header nav ul:nth-child(2) li:hover
 {
     opacity: 0.8;
 }
+header.mobile
+{
+    display: none;
+}
 @keyframes activeLinkAnimation
 {
     from
@@ -63,5 +67,35 @@ header nav ul:nth-child(2) li:hover
         opacity: 1;
         left: 30%;
         transform: rotate(-20deg);
+    }
+}
+@media screen and (max-width: 900px)
+{
+    header
+    {
+        width: 100%;
+        padding: 35px 10px 0 10px;
+    }
+    header nav ul a
+    {
+        padding: 0 10px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 650px)
+{
+    header.desktop
+    {
+        display: none;
+    }
+    header.mobile
+    {
+        display: block;
+        background-color: red;
+    }
+    header nav ul a
+    {
+        padding: 0 10px;
+        font-size: 18px;
     }
 }
