@@ -22,9 +22,11 @@ const SubscribePanel = () => {
     if (error) {
       return;
     }
-    setEmail("");
+    setEmail("Successful");
+    setTimeout(() => {
+      setEmail("");
+    }, 3000);
   };
-
   return (
     <>
       <section className="subscribe-section">
