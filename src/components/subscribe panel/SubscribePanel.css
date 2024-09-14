@@ -84,3 +84,39 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1000px)
+{
+    .subscribe-section .input-container
+    {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .subscribe-section
+    {
+        width: 90%;
+        margin: auto;
+        margin-top: 188px;
+    }
+    .subscribe-section .input-container
+    {
+        width: 100%;
+    }
+    .subscribe-section .input-container input::placeholder,
+    .subscribe-section .input-container input
+    {
+        font-size: 14px;
+        color: #e6e6e652;
+    }
+    .subscribe-section .input-container input
+    {
+        width: 100%;
+        border-radius: 37px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        height: 80px;
+        padding-left: 100px;
+        border-image: linear-gradient(to right, #A3A3A3, #CCCCCC, #FFFFFF, #CCCCCC, #A3A3A3)1;
+    }
+}
