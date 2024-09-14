@@ -4,7 +4,7 @@ import img2 from "../../assets/img/Group 1.png";
 import img3 from "../../assets/img/Group (1).png";
 import img4 from "../../assets/img/game-icons_feather.png";
 const Infobox = () => {
-  const categories = [
+  const infobox = [
     {
       id: 1,
       title: "Healthy Sleep",
@@ -28,11 +28,11 @@ const Infobox = () => {
   ];
   return (
     <>
-      <section className="categories-section">
-        {categories.map((category) => (
-          <div key={category.id} className="category-item">
-            <img src={category.image} alt={category.title} />
-            <h2>{category.title}</h2>
+      <section className="infobox-section">
+        {infobox.map((ibox) => (
+          <div key={ibox.id} className="ibox-item">
+            <img src={ibox.image} alt={ibox.title} />
+            <h2>{ibox.title}</h2>
           </div>
         ))}
       </section>
