@@ -1,9 +1,9 @@
-import "./Category.css";
+import "./Infobox.css";
 import img1 from "../../assets/img/Group.png";
 import img2 from "../../assets/img/Group 1.png";
 import img3 from "../../assets/img/Group (1).png";
 import img4 from "../../assets/img/game-icons_feather.png";
-const Category = () => {
+const Infobox = () => {
   const categories = [
     {
       id: 1,
@@ -40,4 +40,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Infobox;
