@@ -1,0 +1,8 @@
+.sale-section
+{
+    width: 100%;
+    height: 624px;
+    background: url("../../assets/img/sale.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
