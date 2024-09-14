@@ -25,7 +25,6 @@
     margin-bottom: 50px;
     position: relative;
     border-radius: 37px;
-    overflow: hidden;
 }
 .subscribe-section .input-container img
 {
@@ -37,7 +36,6 @@
 .subscribe-section .input-container input
 {
     width: 100%;
-    border-radius: 37px;
     background-color: transparent;
     border: 5px solid transparent;
     height: 80px;
@@ -53,6 +51,7 @@
 .subscribe-section .input-container input
 {
     color: var(--white-clr);
+    background-color: var(--medium-blue-clr);
 }
 .subscribe-section button
 {
