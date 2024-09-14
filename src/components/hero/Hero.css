@@ -35,6 +35,7 @@
     position: absolute;
     bottom: 0;
     white-space: nowrap;
+    left: 36px;
 }
 .hero-component img:nth-child(1)
 {
