@@ -1,6 +1,7 @@
 .subscribe-section
 {
     width: 100%;
+    margin-top: 188px;
 }
 .subscribe-section h5
 {
@@ -21,6 +22,7 @@
     width: 40%;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
 }
 .subscribe-section .input-container img
@@ -43,4 +45,33 @@
 {
     font-size: 24px;
     color: #e6e6e652;
+}
+.subscribe-section button
+{
+    position: relative;
+    background-color: transparent;
+    color: var(--white-clr);
+    font-size: 15px;
+    left: 50%;
+    margin-top: 30px;
+}
+.subscribe-section button span
+{
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    left: 36px;
+}
+.subscribe-section img:nth-child(1)
+{
+    position: absolute;
+    left: 0;
+    left: 50%;
+}
+.subscribe-section img.img2
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

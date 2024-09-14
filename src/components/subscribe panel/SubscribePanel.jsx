@@ -22,8 +22,8 @@ const SubscribePanel = () => {
         </div>
         <button>
           <img src={arrowIcon} alt="" />
-          <img src={circleIcon} alt="" />
-          <span>Buy Now</span>
+          <img src={circleIcon} alt="" className="img2"/>
+          <span>Subscribe Now</span>
         </button>
       </section>
     </>
