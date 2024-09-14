@@ -16,7 +16,7 @@ const Sale = () => {
           <button>
             <img src={arrowIcon} alt="" />
             <img src={circleIcon} alt="" />
-            <span>Shop Now</span>
+            <span>Buy Now</span>
           </button>
         </div>
       </section>
