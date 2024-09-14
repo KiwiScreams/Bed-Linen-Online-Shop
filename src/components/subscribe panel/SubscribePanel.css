@@ -24,6 +24,8 @@
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
+    border-radius: 37px;
+    overflow: hidden;
 }
 .subscribe-section .input-container img
 {
@@ -35,16 +37,22 @@
 .subscribe-section .input-container input
 {
     width: 100%;
-    background-color: transparent;
     border-radius: 37px;
-    border: 3px solid gray;
+    background-color: transparent;
+    border: 5px solid transparent;
     height: 80px;
     padding-left: 120px;
+    border-image: linear-gradient(to right, #A3A3A3, #CCCCCC, #FFFFFF, #CCCCCC, #A3A3A3)1;
 }
-.subscribe-section .input-container input::placeholder
+.subscribe-section .input-container input::placeholder,
+.subscribe-section .input-container input
 {
     font-size: 24px;
     color: #e6e6e652;
+}
+.subscribe-section .input-container input
+{
+    color: var(--white-clr);
 }
 .subscribe-section button
 {
@@ -54,6 +62,7 @@
     font-size: 15px;
     left: 50%;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 .subscribe-section button span
 {
