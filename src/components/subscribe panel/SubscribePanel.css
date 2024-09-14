@@ -1,5 +1,46 @@
 .subscribe-section
 {
     width: 100%;
-    background-color: red;
+}
+.subscribe-section h5
+{
+    color: var(--white-clr);
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+.subscribe-section p
+{
+    color: var(--white-clr);
+    font-size: 20px;
+    text-align: center;
+}
+.subscribe-section .input-container
+{
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+.subscribe-section .input-container img
+{
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.subscribe-section .input-container input
+{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 37px;
+    border: 3px solid gray;
+    height: 80px;
+    padding-left: 120px;
+}
+.subscribe-section .input-container input::placeholder
+{
+    font-size: 24px;
+    color: #e6e6e652;
 }

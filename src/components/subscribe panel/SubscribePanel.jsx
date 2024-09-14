@@ -1,5 +1,5 @@
 import "./SubscribePanel.css";
-import emailIcon from "../../assets/img/Vector.svg";
+import emailIcon from "../../assets/img/Vector.png";
 import arrowIcon from "../../assets/img/arrow.png";
 import circleIcon from "../../assets/img/cyrcle.png";
 const SubscribePanel = () => {
@@ -8,8 +8,8 @@ const SubscribePanel = () => {
       <section className="subscribe-section">
         <h5>Subscribe to get the latest news about us</h5>
         <p>
-          Sign up for our newsletter & knowing about offers We never spam your
-          inbox, so don't worry.
+          Sign up for our newsletter & knowing about
+          <br /> offers We never spam your inbox, so don't worry.
         </p>
         <div className="input-container">
           <input
