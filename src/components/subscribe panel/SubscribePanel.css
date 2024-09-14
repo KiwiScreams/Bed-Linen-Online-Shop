@@ -84,6 +84,13 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.subscribe-section .error-message
+{
+    color: var(--white-clr);
+    position: absolute;
+    bottom: 2px;
+    right: 26px;
+}
 @media screen and (max-width: 1000px)
 {
     .subscribe-section .input-container
