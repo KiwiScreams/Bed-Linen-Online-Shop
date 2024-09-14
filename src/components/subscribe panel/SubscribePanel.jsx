@@ -17,12 +17,12 @@ const SubscribePanel = () => {
       setError("");
     }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (error) {
       return;
     }
+    setEmail("");
   };
 
   return (
