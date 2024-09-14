@@ -70,4 +70,21 @@
 {
     margin: auto;
     display: block;
+    width: 100%;
+}
+@media screen and (max-width: 600px)
+{
+    .hero-images .hero-image
+    {
+        width: 150%;
+    }
+    .hero-component
+    {
+        width: 90%;
+        margin: auto;
+    }
+    .hero-component h1
+    {
+        font-size: 54px;
+    }
 }
