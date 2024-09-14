@@ -1,5 +1,9 @@
 import "./Footer.css";
-
+import PhoneIcon from "../../../assets/img/Vector (1).svg";
+import linkedinIcon from "../../../assets/img/Vector (2).svg";
+import pinterestIcon from "../../../assets/img/Vector (3).svg";
+import instagramIcon from "../../../assets/img/Vector (4).svg";
+import locationIcon from "../../../assets/img/Vector (6).svg";
 const Footer = () => {
   return (
     <>
