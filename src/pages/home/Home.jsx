@@ -4,6 +4,7 @@ import "./Home.css";
 import About from "../../components/about us/About";
 import Sale from "../../components/sale/Sale";
 import SubscribePanel from "../../components/subscribe panel/SubscribePanel";
+import Blog from "../../components/blog/Blog";
 const Home = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Home = () => {
       <Infobox />
       <About />
       <Sale />
+      <Blog />
       <SubscribePanel />
     </>
   );
