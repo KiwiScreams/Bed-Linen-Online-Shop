@@ -1,12 +1,10 @@
 .blog-section
 {
-    background-color: red;
     color: var(--white-clr);
     padding: 0 64px;
 }
 .blog-section .blog-header
 {
-    background-color: blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
