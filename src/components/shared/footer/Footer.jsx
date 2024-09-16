@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <footer>
         <div className="footer-img"></div>
-        <div>
+        <div className="footer-top">
           <ul>
             <li>About</li>
             <li>Our Story</li>
@@ -38,7 +38,7 @@ const Footer = () => {
             <li>Returns</li>
             <li>Guaranlee</li>
           </ul>
-          <div>
+          <div className="footer-container">
             <ul>
               <li>
                 <img src={locationIcon} alt="" />
@@ -53,13 +53,17 @@ const Footer = () => {
                 +1-222-34-sleep
               </li>
             </ul>
-            <div>
+            <div className="social-icons-container">
               <span>Social Media: </span>
               <img src={linkedinIcon} alt="" />
               <img src={pinterestIcon} alt="" />
               <img src={instagramIcon} alt="" />
             </div>
           </div>
+        </div>
+        <div className="footer-bottom">
+          <p>Created By Elinaui9 </p>
+          <p>Copyright 2023 sleepy shop . All rights reserved.</p>
         </div>
       </footer>
     </>
