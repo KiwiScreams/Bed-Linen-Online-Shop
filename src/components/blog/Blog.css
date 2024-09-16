@@ -54,7 +54,7 @@
     margin-bottom: 15px;
     font-size: 20px;
 }
-.blog-section div
+.blog-section div.info
 {
     width: 50%;
 }
@@ -75,8 +75,9 @@
 }
 .slide
 {
-    flex: 0 0 100%;
-    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: transform 0.5s ease-in-out;
 }
 .slide.active
@@ -85,7 +86,7 @@
 }
 .slide:not(.active)
 {
-    transform: translateX(100%);
+    transform: translateX(200%);
 }
 .prev, .next
 {
