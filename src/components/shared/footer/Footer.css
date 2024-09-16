@@ -2,10 +2,12 @@ footer
 {
     background: url("../../../assets/img/girl.png");
     width: 100%;
+    padding-top: 150px;
     height: 500px;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 0;
 
 }
 footer .footer-img
@@ -24,9 +26,10 @@ footer .footer-top
 {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 65%;
     margin-left: auto;
     margin-right: 27px;
+    margin-bottom: 80px;
 }
 footer .footer-top ul
 {
@@ -56,4 +59,11 @@ footer .social-icons-container
     align-items: center;
     color: var(--white-clr);
     margin-top: 52px;
+}
+footer .footer-bottom
+{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    color: #F5F7FA;
 }
