@@ -65,7 +65,10 @@ footer .footer-bottom
     width: fit-content;
     margin: auto;
     text-align: center;
-    color: #F5F7FA;
+}
+footer .footer-bottom p
+{
+    color: #979797;
 }
 @media screen and (max-width: 1130px)
 {
