@@ -2,10 +2,12 @@ footer
 {
     background: url("../../../assets/img/girl.png");
     width: 100%;
+    padding-top: 150px;
     height: 500px;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 0;
 }
 footer .footer-img
 {
@@ -18,4 +20,120 @@ footer .footer-img
     z-index: -1;
     background-size: 100%;
     background-position: center;
+}
+footer .footer-top
+{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-left: auto;
+    margin-right: 27px;
+    margin-bottom: 80px;
+}
+footer .footer-top ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+footer .footer-top ul li
+{
+    font-size: 16px;
+    color: var(--white-clr);
+}
+footer .footer-top ul li:nth-child(1)
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .footer-top .footer-container ul li
+{
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+}
+footer .social-icons-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-clr);
+    margin-top: 52px;
+}
+footer .footer-bottom
+{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+footer .footer-bottom p
+{
+    color: #979797;
+}
+@media screen and (max-width: 1130px)
+{
+    footer .footer-top
+    {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 980px)
+{
+    footer .footer-top
+    {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    footer .footer-top
+    {
+        width: 98%;
+        margin: auto;
+        margin-bottom: 80px;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+    footer .footer-top ul
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    footer .social-icons-container
+    {
+        display: flex;
+        align-items: center;
+        color: var(--white-clr);
+        margin: auto;
+        margin-top: 52px;
+        text-align: center;
+        width: fit-content;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    footer .footer-top .footer-container ul li
+    {
+        font-size: 16px;
+        display: flex;
+        gap: 10px;
+        margin: auto;
+    }
+    footer
+    {
+        background: none;
+        width: 100%;
+        padding-top: 100px;
+        height: fit-content;
+    }
+    footer .footer-img
+    {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
