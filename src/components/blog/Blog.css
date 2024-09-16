@@ -9,10 +9,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 80px;
+    white-space: nowrap;
 }
 .blog-section .blog-header .line
 {
-    width: 85%;
+    width: 75%;
     background: linear-gradient(to right, #5E97AB, #5e97ab5e);
     height: 1px;
 }
@@ -54,84 +55,11 @@
     margin-bottom: 15px;
     font-size: 20px;
 }
-.blog-section div.info
+.blog-section div
 {
     width: 50%;
 }
 .blog-section div img
 {
     width: 100%;
-}
-.slider
-{
-    display: flex;
-    overflow-x: hidden;
-    position: relative;
-}
-.slides
-{
-    display: flex;
-    flex-wrap: nowrap;
-}
-.slide
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-}
-.slide.active
-{
-    transform: translateX(0);
-}
-.slide:not(.active)
-{
-    transform: translateX(200%);
-}
-.prev, .next
-{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.prev
-{
-    left: 10px;
-}
-.next
-{
-    right: 10px;
-}
-.prev:hover, .next:hover
-{
-    background-color: #ccc;
-}
-.prev:focus, .next:focus
-{
-    outline: none;
-}
-.dots
-{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-.dot
-{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.dot.active
-{
-    background-color: #333;
 }
