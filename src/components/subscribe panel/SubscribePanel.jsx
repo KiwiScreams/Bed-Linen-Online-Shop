@@ -2,10 +2,31 @@ import "./SubscribePanel.css";
 import emailIcon from "../../assets/img/Vector.png";
 import arrowIcon from "../../assets/img/arrow.png";
 import circleIcon from "../../assets/img/cyrcle.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 const SubscribePanel = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    if (e.type === "click") {
+      e.preventDefault();
+    }
+    if (!email) {
+      setError("Please enter an email address");
+      return;
+    }
+    if (error) {
+      return;
+    }
+    setEmail("Successful!");
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setEmail("");
+    }, 3000);
+    document.getElementById("email").blur();
+  };
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
@@ -13,19 +34,17 @@ const SubscribePanel = () => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(inputValue)) {
       setError("Please enter a valid email address");
+    } else if (inputValue === "") {
+      setError("Please enter an email address");
     } else {
       setError("");
     }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (error) {
-      return;
+
+  const handleInputKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
     }
-    setEmail("Successful");
-    setTimeout(() => {
-      setEmail("");
-    }, 3000);
   };
   return (
     <>
@@ -43,11 +62,13 @@ const SubscribePanel = () => {
             placeholder="Enter your email"
             value={email}
             onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
+            className={submitted ? "disabled" : ""}
           />
           <img src={emailIcon} alt="email icon" />
           {error && <div className="error-message">{error}</div>}
         </div>
-        <button onClick={handleSubmit}>
+        <button onClick={handleSubmit} className={submitted ? "disabled" : ""}>
           <img src={arrowIcon} alt="arrow icon" />
           <img src={circleIcon} alt="arrow icon" className="img2" />
           <span>Subscribe Now</span>

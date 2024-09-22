@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import cartIcon from "../../../assets/img/Shopping.svg";
 import userIcon from "../../../assets/img/profile.svg";
 import languageIcon from "../../../assets/img/language.svg";
-import activeIcon from "../../../assets/img/game-icons_feather.png";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 const Header = () => {

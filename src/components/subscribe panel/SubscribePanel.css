@@ -93,6 +93,11 @@
   bottom: 2px;
   right: 26px;
 }
+.disabled
+{
+  pointer-events: none;
+  opacity: 0.5;
+}
 @media screen and (max-width: 1000px)
 {
   .subscribe-section .input-container
