@@ -19,15 +19,9 @@ const Header = () => {
       setIsMenuOpen(false);
     }
   };
- useEffect(() => {
-    const handleRouteChange = () => {
-      setIsMenuOpen(false);
-    };
-    navigate.addListener('locationChange', handleRouteChange);
-    return () => {
-      navigate.removeListener('locationChange', handleRouteChange);
-    };
-  }, [navigate]);
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   useEffect(() => {
     document.addEventListener("click", handleDocumentClick);
