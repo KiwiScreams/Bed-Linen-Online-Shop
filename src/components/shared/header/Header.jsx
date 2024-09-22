@@ -23,6 +23,14 @@ const Header = () => {
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
+  const navLinks = [
+    { to: "/", text: "Home" },
+    { to: "/about", text: "About" },
+    { to: "/payment", text: "Payment" },
+    { to: "/catalog", text: "Catalog" },
+    { to: "/shop", text: "Shop" },
+    { to: "/blog", text: "Blog" },
+  ];
   return (
     <>
       <header className="desktop">
@@ -83,7 +91,7 @@ const Header = () => {
           </ul>
           <ul>
             <li className="pointer">
-              <img src={cartIcon} alt="cart icon"/>
+              <img src={cartIcon} alt="cart icon" />
             </li>
             <li className="pointer">
               <img src={userIcon} alt="user icon" />
