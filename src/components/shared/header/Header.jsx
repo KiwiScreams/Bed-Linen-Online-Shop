@@ -41,69 +41,23 @@ const Header = () => {
       <header className="desktop">
         <nav>
           <ul>
-            <li>
-              <Link
-                to="/"
-                className={location.pathname === "/" ? "active-link" : ""}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={location.pathname === "/about" ? "active-link" : ""}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/payment"
-                className={
-                  location.pathname === "/payment" ? "active-link" : ""
-                }
-              >
-                Payment
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/catalog"
-                className={
-                  location.pathname === "/catalog" ? "active-link" : ""
-                }
-              >
-                Catalog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/shop"
-                className={location.pathname === "/shop" ? "active-link" : ""}
-              >
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={location.pathname === "/blog" ? "active-link" : ""}
-              >
-                Blog
-              </Link>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={link.to}
+                  className={location.pathname === link.to ? "active-link" : ""}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul>
-            <li className="pointer">
-              <img src={cartIcon} alt="cart icon" />
-            </li>
-            <li className="pointer">
-              <img src={userIcon} alt="user icon" />
-            </li>
-            <li className="pointer">
-              <img src={languageIcon} alt="language icon" />
-            </li>
+            {icons.map((icon, index) => (
+              <li key={index} className="pointer">
+                <img src={icon.src} alt={icon.alt} />
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
