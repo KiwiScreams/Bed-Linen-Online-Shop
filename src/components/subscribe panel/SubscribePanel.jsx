@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 const SubscribePanel = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     if (e.type === "click") {
@@ -18,10 +19,13 @@ const SubscribePanel = () => {
     if (error) {
       return;
     }
-    setEmail("Successful");
+    setEmail("Successful!"); // Set email to "Successful!" when submission is successful
+    setSubmitted(true);
     setTimeout(() => {
-      setEmail("");
+      setSubmitted(false);
+      setEmail(""); // Reset email to empty string after 3 seconds
     }, 3000);
+    document.getElementById("email").blur();
   };
 
   const handleInputChange = (e) => {
@@ -59,11 +63,12 @@ const SubscribePanel = () => {
             value={email}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
+            className={submitted ? "disabled" : ""}
           />
           <img src={emailIcon} alt="email icon" />
           {error && <div className="error-message">{error}</div>}
         </div>
-        <button onClick={handleSubmit}>
+        <button onClick={handleSubmit} className={submitted ? "disabled" : ""}>
           <img src={arrowIcon} alt="arrow icon" />
           <img src={circleIcon} alt="arrow icon" className="img2" />
           <span>Subscribe Now</span>
