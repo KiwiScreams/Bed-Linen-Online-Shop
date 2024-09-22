@@ -31,6 +31,11 @@ const Header = () => {
     { to: "/shop", text: "Shop" },
     { to: "/blog", text: "Blog" },
   ];
+  const icons = [
+    { src: cartIcon, alt: "cart icon" },
+    { src: userIcon, alt: "user icon" },
+    { src: languageIcon, alt: "language icon" },
+  ];
   return (
     <>
       <header className="desktop">
