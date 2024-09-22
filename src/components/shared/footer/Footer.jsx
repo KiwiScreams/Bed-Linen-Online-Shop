@@ -11,12 +11,23 @@ const Footer = () => {
       name: "locationIcon",
       alt: "location icon",
       text: "12 jhon Avenue #2, new York",
+      src: locationIcon,
     },
-    { name: "emailIcon", alt: "email icon", text: "sleepy@shop.com" },
-    { name: "PhoneIcon", alt: "phone icon", text: "+1-222-34-sleep" },
-    { name: "linkedinIcon", alt: "linkedin icon" },
-    { name: "pinterestIcon", alt: "pinterest icon" },
-    { name: "instagramIcon", alt: "instagram icon" },
+    {
+      name: "emailIcon",
+      alt: "email icon",
+      text: "sleepy@shop.com",
+      src: emailIcon,
+    },
+    {
+      name: "PhoneIcon",
+      alt: "phone icon",
+      text: "+1-222-34-sleep",
+      src: PhoneIcon,
+    },
+    { name: "linkedinIcon", alt: "linkedin icon", src: linkedinIcon },
+    { name: "pinterestIcon", alt: "pinterest icon", src: pinterestIcon },
+    { name: "instagramIcon", alt: "instagram icon", src: instagramIcon },
   ];
   return (
     <>
@@ -51,7 +62,7 @@ const Footer = () => {
             <ul>
               {icons.slice(0, 3).map((icon, index) => (
                 <li key={index}>
-                  <img src={icon.name} alt={icon.alt} />
+                  <img src={icon.src} alt={icon.alt} />
                   {icon.text}
                 </li>
               ))}
@@ -59,7 +70,7 @@ const Footer = () => {
             <div className="social-icons-container">
               <span>Social Media: </span>
               {icons.slice(3).map((icon, index) => (
-                <img key={index} src={icon.name} alt={icon.alt} />
+                <img key={index} src={icon.src} alt={icon.alt} />
               ))}
             </div>
           </div>
