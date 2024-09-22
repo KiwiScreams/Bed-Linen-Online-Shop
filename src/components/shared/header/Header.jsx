@@ -36,6 +36,11 @@ const Header = () => {
     { src: userIcon, alt: "user icon" },
     { src: languageIcon, alt: "language icon" },
   ];
+  const bars = [
+    { className: "bar1" },
+    { className: "bar2" },
+    { className: "bar3" }
+  ];
   return (
     <>
       <header className="desktop">
