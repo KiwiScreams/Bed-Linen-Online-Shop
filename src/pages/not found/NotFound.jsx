@@ -12,7 +12,7 @@ const NotFound = () => {
       <section className="not-found-page">
         <div>
           <div className="image-container">
-            <img src={errorImage} alt="" />
+            <img src={errorImage} alt="error icon" />
           </div>
           <h2>Oops!</h2>
           <p>

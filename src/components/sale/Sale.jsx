@@ -14,8 +14,8 @@ const Sale = () => {
             enough to last for years
           </p>
           <button>
-            <img src={arrowIcon} alt="" />
-            <img src={circleIcon} alt="" />
+            <img src={arrowIcon} alt="arrow icon" />
+            <img src={circleIcon} alt="arrow icon" />
             <span>Buy Now</span>
           </button>
         </div>

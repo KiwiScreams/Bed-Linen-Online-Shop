@@ -44,12 +44,12 @@ const SubscribePanel = () => {
             value={email}
             onChange={handleInputChange}
           />
-          <img src={emailIcon} alt="" />
+          <img src={emailIcon} alt="email icon" />
           {error && <div className="error-message">{error}</div>}
         </div>
         <button onClick={handleSubmit}>
-          <img src={arrowIcon} alt="" />
-          <img src={circleIcon} alt="" className="img2" />
+          <img src={arrowIcon} alt="arrow icon" />
+          <img src={circleIcon} alt="arrow icon" className="img2" />
           <span>Subscribe Now</span>
         </button>
       </section>
