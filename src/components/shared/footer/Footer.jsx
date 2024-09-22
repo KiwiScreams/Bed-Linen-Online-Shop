@@ -6,6 +6,18 @@ import instagramIcon from "../../../assets/img/Vector (4).svg";
 import emailIcon from "../../../assets/img/Vector.svg";
 import locationIcon from "../../../assets/img/location.svg";
 const Footer = () => {
+  const icons = [
+    {
+      name: "locationIcon",
+      alt: "location icon",
+      text: "12 jhon Avenue #2, new York",
+    },
+    { name: "emailIcon", alt: "email icon", text: "sleepy@shop.com" },
+    { name: "PhoneIcon", alt: "phone icon", text: "+1-222-34-sleep" },
+    { name: "linkedinIcon", alt: "linkedin icon" },
+    { name: "pinterestIcon", alt: "pinterest icon" },
+    { name: "instagramIcon", alt: "instagram icon" },
+  ];
   return (
     <>
       <footer>
