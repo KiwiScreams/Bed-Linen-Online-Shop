@@ -45,6 +45,7 @@ footer .footer-top ul li:nth-child(1)
 {
     font-size: 20px;
     font-weight: bold;
+    cursor: auto;
 }
 footer .footer-top .footer-container ul li
 {

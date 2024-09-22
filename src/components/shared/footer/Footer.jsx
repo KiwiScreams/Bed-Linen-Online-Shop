@@ -3,61 +3,65 @@ import PhoneIcon from "../../../assets/img/Vector (1).svg";
 import linkedinIcon from "../../../assets/img/Vector (2).svg";
 import pinterestIcon from "../../../assets/img/Vector (3).svg";
 import instagramIcon from "../../../assets/img/Vector (4).svg";
-// import locationIcon from "../../../assets/img/Vector (6).svg";
-import arrowLeft from "../../../assets/img/Vector (6).svg";
-import arrowRight from "../../../assets/img/Vector (5).svg";
 import emailIcon from "../../../assets/img/Vector.svg";
 import locationIcon from "../../../assets/img/location.svg";
 const Footer = () => {
+  const icons = [
+    {
+      name: "locationIcon",
+      alt: "location icon",
+      text: "12 jhon Avenue #2, new York",
+      src: locationIcon,
+    },
+    {
+      name: "emailIcon",
+      alt: "email icon",
+      text: "sleepy@shop.com",
+      src: emailIcon,
+    },
+    {
+      name: "PhoneIcon",
+      alt: "phone icon",
+      text: "+1-222-34-sleep",
+      src: PhoneIcon,
+    },
+    { name: "linkedinIcon", alt: "linkedin icon", src: linkedinIcon },
+    { name: "pinterestIcon", alt: "pinterest icon", src: pinterestIcon },
+    { name: "instagramIcon", alt: "instagram icon", src: instagramIcon },
+  ];
+  const footerLinks = [
+    ["About", "Our Story", "Our Impact", "FAQ"],
+    ["Customer Recourses", "E-Catalog", "Request Catalog", "Support"],
+    ["Services", "Delivery & Shipping", "Returns", "Guaranlee"],
+  ];
   return (
     <>
       <footer>
         <div className="footer-img"></div>
         <div className="footer-top">
-          <ul>
-            <li>About</li>
-            <li>Our Story</li>
-            <li>Our Impact</li>
-            <li>FAQ</li>
-          </ul>
-          <ul>
-            <li>Customer Recourses</li>
-            <li>E-Catalog</li>
-            <li>Request Catalog</li>
-            <li>Support</li>
-          </ul>
-          <ul>
-            <li>Services</li>
-            <li>Delivery & Shipping</li>
-            <li>Returns</li>
-            <li>Guaranlee</li>
-          </ul>
-          <ul>
-            <li>Services</li>
-            <li>Delivery & Shipping</li>
-            <li>Returns</li>
-            <li>Guaranlee</li>
-          </ul>
+          {footerLinks.map((links, index) => (
+            <ul key={index}>
+              {links.map((link, linkIndex) => (
+                <li key={linkIndex} className="pointer">
+                  {link}
+                </li>
+              ))}
+            </ul>
+          ))}
           <div className="footer-container">
             <ul>
-              <li>
-                <img src={locationIcon} alt="location icon" />
-                12 jhon Avenue #2, new York
-              </li>
-              <li>
-                <img src={emailIcon} alt="email icon" />
-                sleepy@shop.com
-              </li>
-              <li>
-                <img src={PhoneIcon} alt="phone icon" />
-                +1-222-34-sleep
-              </li>
+              {icons.slice(0, 3).map((icon, index) => (
+                <li key={index}>
+                  <img src={icon.src} alt={icon.alt} />
+                  {icon.text}
+                </li>
+              ))}
             </ul>
             <div className="social-icons-container">
               <span>Social Media: </span>
-              <img src={linkedinIcon} alt="linkedin icon" />
-              <img src={pinterestIcon} alt="pinterest icon" />
-              <img src={instagramIcon} alt="instagram icon" />
+              {icons.slice(3).map((icon, index) => (
+                <img key={index} src={icon.src} alt={icon.alt} />
+              ))}
             </div>
           </div>
         </div>
