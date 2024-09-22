@@ -49,24 +49,18 @@ const Footer = () => {
           </ul>
           <div className="footer-container">
             <ul>
-              <li>
-                <img src={locationIcon} alt="location icon" />
-                12 jhon Avenue #2, new York
-              </li>
-              <li>
-                <img src={emailIcon} alt="email icon" />
-                sleepy@shop.com
-              </li>
-              <li>
-                <img src={PhoneIcon} alt="phone icon" />
-                +1-222-34-sleep
-              </li>
+              {icons.slice(0, 3).map((icon, index) => (
+                <li key={index}>
+                  <img src={icon.name} alt={icon.alt} />
+                  {icon.text}
+                </li>
+              ))}
             </ul>
             <div className="social-icons-container">
               <span>Social Media: </span>
-              <img src={linkedinIcon} alt="linkedin icon" />
-              <img src={pinterestIcon} alt="pinterest icon" />
-              <img src={instagramIcon} alt="instagram icon" />
+              {icons.slice(3).map((icon, index) => (
+                <img key={index} src={icon.name} alt={icon.alt} />
+              ))}
             </div>
           </div>
         </div>
