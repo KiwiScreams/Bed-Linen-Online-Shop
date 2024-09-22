@@ -18,7 +18,7 @@ const About = () => {
           <button>Read More</button>
         </div>
         <div>
-          <img src={aboutImage} alt="" />
+          <img src={aboutImage} alt="about image" />
         </div>
       </section>
     </>

@@ -32,14 +32,14 @@ const Hero = () => {
         <h1>Dream in comfort</h1>
         <p>Creating Your Perfect Sleep Sanctuary With Us</p>
         <button>
-          <img src={arrowIcon} alt="" />
-          <img src={circleIcon} alt="" />
+          <img src={arrowIcon} alt="arrow icon" />
+          <img src={circleIcon} alt="circle icon" />
           <span>Shop Now</span>
         </button>
       </section>
       <div className="hero-images">
-        <img src={heroImage} alt="" className="hero-image" />
-        <img ref={feathersImageRef} src={feathersImage} alt="" />
+        <img src={heroImage} alt="bed linen" className="hero-image" />
+        <img ref={feathersImageRef} src={feathersImage} alt="bed linen" />
       </div>
     </>
   );

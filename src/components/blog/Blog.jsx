@@ -30,7 +30,7 @@ const Blog = () => {
             <button>Read More</button>
           </div>
           <div>
-            <img src={image} alt="" />
+            <img src={image} alt="bed linen" />
           </div>
         </div>
       </section>
