@@ -2,7 +2,7 @@ import "./SubscribePanel.css";
 import emailIcon from "../../assets/img/Vector.png";
 import arrowIcon from "../../assets/img/arrow.png";
 import circleIcon from "../../assets/img/cyrcle.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 const SubscribePanel = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -19,11 +19,11 @@ const SubscribePanel = () => {
     if (error) {
       return;
     }
-    setEmail("Successful!"); // Set email to "Successful!" when submission is successful
+    setEmail("Successful!");
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setEmail(""); // Reset email to empty string after 3 seconds
+      setEmail("");
     }, 3000);
     document.getElementById("email").blur();
   };
