@@ -7,6 +7,23 @@ const SubscribePanel = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
+  const handleSubmit = (e) => {
+    if (e.type === "click") {
+      e.preventDefault();
+    }
+    if (!email) {
+      setError("Please enter an email address");
+      return;
+    }
+    if (error) {
+      return;
+    }
+    setEmail("Successful");
+    setTimeout(() => {
+      setEmail("");
+    }, 3000);
+  };
+
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
     setEmail(inputValue);
@@ -19,19 +36,11 @@ const SubscribePanel = () => {
       setError("");
     }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) {
-      setError("Please enter an email address");
-      return;
+
+  const handleInputKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
     }
-    if (error) {
-      return;
-    }
-    setEmail("Successful");
-    setTimeout(() => {
-      setEmail("");
-    }, 3000);
   };
   return (
     <>
@@ -49,6 +58,7 @@ const SubscribePanel = () => {
             placeholder="Enter your email"
             value={email}
             onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
           />
           <img src={emailIcon} alt="email icon" />
           {error && <div className="error-message">{error}</div>}
