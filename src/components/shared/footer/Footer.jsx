@@ -42,7 +42,9 @@ const Footer = () => {
           {footerLinks.map((links, index) => (
             <ul key={index}>
               {links.map((link, linkIndex) => (
-                <li key={linkIndex}>{link}</li>
+                <li key={linkIndex} className="pointer">
+                  {link}
+                </li>
               ))}
             </ul>
           ))}
