@@ -13,12 +13,18 @@ const SubscribePanel = () => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(inputValue)) {
       setError("Please enter a valid email address");
+    } else if (inputValue === "") {
+      setError("Please enter an email address");
     } else {
       setError("");
     }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email) {
+      setError("Please enter an email address");
+      return;
+    }
     if (error) {
       return;
     }
