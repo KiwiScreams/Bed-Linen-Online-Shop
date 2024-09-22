@@ -39,15 +39,15 @@ const Footer = () => {
       <footer>
         <div className="footer-img"></div>
         <div className="footer-top">
-          {footerLinks.map((links, index) => (
-            <ul key={index}>
-              {links.map((link, linkIndex) => (
-                <li key={linkIndex} className="pointer">
-                  {link}
-                </li>
-              ))}
-            </ul>
-          ))}
+            {footerLinks.map((links, index) => (
+              <ul key={index}>
+                {links.map((link, linkIndex) => (
+                  <li key={linkIndex} className="pointer">
+                    {link}
+                  </li>
+                ))}
+              </ul>
+            ))}
           <div className="footer-container">
             <ul>
               {icons.slice(0, 3).map((icon, index) => (

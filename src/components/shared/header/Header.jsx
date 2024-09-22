@@ -4,9 +4,11 @@ import cartIcon from "../../../assets/img/Shopping.svg";
 import userIcon from "../../../assets/img/profile.svg";
 import languageIcon from "../../../assets/img/language.svg";
 import activeIcon from "../../../assets/img/game-icons_feather.png";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const mobileHeaderRef = useRef(null);
   const handleMenuToggle = () => {
@@ -18,79 +20,55 @@ const Header = () => {
     }
   };
   useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  useEffect(() => {
     document.addEventListener("click", handleDocumentClick);
     return () => {
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
+  const navLinks = [
+    { to: "/", text: "Home" },
+    { to: "/about", text: "About" },
+    { to: "/payment", text: "Payment" },
+    { to: "/catalog", text: "Catalog" },
+    { to: "/shop", text: "Shop" },
+    { to: "/blog", text: "Blog" },
+  ];
+  const icons = [
+    { src: cartIcon, alt: "cart icon" },
+    { src: userIcon, alt: "user icon" },
+    { src: languageIcon, alt: "language icon" },
+  ];
+  const bars = [
+    { className: "bar1" },
+    { className: "bar2" },
+    { className: "bar3" },
+  ];
   return (
     <>
       <header className="desktop">
         <nav>
           <ul>
-            <li>
-              <Link
-                to="/"
-                className={location.pathname === "/" ? "active-link" : ""}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={location.pathname === "/about" ? "active-link" : ""}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/payment"
-                className={
-                  location.pathname === "/payment" ? "active-link" : ""
-                }
-              >
-                Payment
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/catalog"
-                className={
-                  location.pathname === "/catalog" ? "active-link" : ""
-                }
-              >
-                Catalog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/shop"
-                className={location.pathname === "/shop" ? "active-link" : ""}
-              >
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={location.pathname === "/blog" ? "active-link" : ""}
-              >
-                Blog
-              </Link>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={link.to}
+                  className={location.pathname === link.to ? "active-link" : ""}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul>
-            <li className="pointer">
-              <img src={cartIcon} alt="cart icon"/>
-            </li>
-            <li className="pointer">
-              <img src={userIcon} alt="user icon" />
-            </li>
-            <li className="pointer">
-              <img src={languageIcon} alt="language icon" />
-            </li>
+            {icons.map((icon, index) => (
+              <li key={index} className="pointer">
+                <img src={icon.src} alt={icon.alt} />
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -103,74 +81,28 @@ const Header = () => {
             className={`bar-container ${isMenuOpen ? "change" : ""}`}
             onClick={handleMenuToggle}
           >
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
+            {bars.map((bar, index) => (
+              <div key={index} className={bar.className}></div>
+            ))}
           </div>
           <ul className={`${isMenuOpen ? "nav-open" : "nav-closed"}`}>
-            <li>
-              <Link
-                to="/"
-                className={location.pathname === "/" ? "active-link" : ""}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={location.pathname === "/about" ? "active-link" : ""}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/payment"
-                className={
-                  location.pathname === "/payment" ? "active-link" : ""
-                }
-              >
-                Payment
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/catalog"
-                className={
-                  location.pathname === "/catalog" ? "active-link" : ""
-                }
-              >
-                Catalog
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/shop"
-                className={location.pathname === "/shop" ? "active-link" : ""}
-              >
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={location.pathname === "/blog" ? "active-link" : ""}
-              >
-                Blog
-              </Link>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={link.to}
+                  className={location.pathname === link.to ? "active-link" : ""}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul>
-            <li className="pointer">
-              <img src={cartIcon} alt="cart icon" />
-            </li>
-            <li className="pointer">
-              <img src={userIcon} alt="user icon" />
-            </li>
-            <li className="pointer">
-              <img src={languageIcon} alt="language icon" />
-            </li>
+            {icons.map((icon, index) => (
+              <li key={index} className="pointer">
+                <img src={icon.src} alt={icon.alt} />
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
