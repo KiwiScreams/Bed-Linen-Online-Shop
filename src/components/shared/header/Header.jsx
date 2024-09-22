@@ -4,9 +4,11 @@ import cartIcon from "../../../assets/img/Shopping.svg";
 import userIcon from "../../../assets/img/profile.svg";
 import languageIcon from "../../../assets/img/language.svg";
 import activeIcon from "../../../assets/img/game-icons_feather.png";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const mobileHeaderRef = useRef(null);
   const handleMenuToggle = () => {
@@ -17,6 +19,16 @@ const Header = () => {
       setIsMenuOpen(false);
     }
   };
+ useEffect(() => {
+    const handleRouteChange = () => {
+      setIsMenuOpen(false);
+    };
+    navigate.addListener('locationChange', handleRouteChange);
+    return () => {
+      navigate.removeListener('locationChange', handleRouteChange);
+    };
+  }, [navigate]);
+
   useEffect(() => {
     document.addEventListener("click", handleDocumentClick);
     return () => {
