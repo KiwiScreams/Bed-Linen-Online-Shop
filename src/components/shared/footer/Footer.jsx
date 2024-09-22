@@ -29,6 +29,11 @@ const Footer = () => {
     { name: "pinterestIcon", alt: "pinterest icon", src: pinterestIcon },
     { name: "instagramIcon", alt: "instagram icon", src: instagramIcon },
   ];
+  const footerLinks = [
+    ["About", "Our Story", "Our Impact", "FAQ"],
+    ["Customer Recourses", "E-Catalog", "Request Catalog", "Support"],
+    ["Services", "Delivery & Shipping", "Returns", "Guaranlee"],
+  ];
   return (
     <>
       <footer>
@@ -45,12 +50,6 @@ const Footer = () => {
             <li>E-Catalog</li>
             <li>Request Catalog</li>
             <li>Support</li>
-          </ul>
-          <ul>
-            <li>Services</li>
-            <li>Delivery & Shipping</li>
-            <li>Returns</li>
-            <li>Guaranlee</li>
           </ul>
           <ul>
             <li>Services</li>
