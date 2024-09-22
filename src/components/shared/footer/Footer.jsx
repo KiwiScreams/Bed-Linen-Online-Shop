@@ -41,23 +41,23 @@ const Footer = () => {
           <div className="footer-container">
             <ul>
               <li>
-                <img src={locationIcon} alt="" />
+                <img src={locationIcon} alt="location icon" />
                 12 jhon Avenue #2, new York
               </li>
               <li>
-                <img src={emailIcon} alt="" />
+                <img src={emailIcon} alt="email icon" />
                 sleepy@shop.com
               </li>
               <li>
-                <img src={PhoneIcon} alt="" />
+                <img src={PhoneIcon} alt="phone icon" />
                 +1-222-34-sleep
               </li>
             </ul>
             <div className="social-icons-container">
               <span>Social Media: </span>
-              <img src={linkedinIcon} alt="" />
-              <img src={pinterestIcon} alt="" />
-              <img src={instagramIcon} alt="" />
+              <img src={linkedinIcon} alt="linkedin icon" />
+              <img src={pinterestIcon} alt="pinterest icon" />
+              <img src={instagramIcon} alt="instagram icon" />
             </div>
           </div>
         </div>
