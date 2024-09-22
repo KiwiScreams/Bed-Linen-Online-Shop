@@ -39,7 +39,7 @@ const Header = () => {
   const bars = [
     { className: "bar1" },
     { className: "bar2" },
-    { className: "bar3" }
+    { className: "bar3" },
   ];
   return (
     <>
@@ -75,9 +75,9 @@ const Header = () => {
             className={`bar-container ${isMenuOpen ? "change" : ""}`}
             onClick={handleMenuToggle}
           >
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
+            {bars.map((bar, index) => (
+              <div key={index} className={bar.className}></div>
+            ))}
           </div>
           <ul className={`${isMenuOpen ? "nav-open" : "nav-closed"}`}>
             {navLinks.map((link, index) => (
